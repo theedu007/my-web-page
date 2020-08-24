@@ -1,0 +1,36 @@
+.main-container {
+    height: 100%;
+    background-color: rgba(108, 108, 108, 0.2);
+    background-image: url('../../components/img/mainPageBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.main-continer-layer {
+    background-color: rgba(0, 0, 0, 0.87);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container-content {
+    color: white;
+    margin-left: 70px;
+}
+
+.main-container-content h1 {
+    font-size: 65px;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+.main-container-content h2 {
+    margin: 0;
+    margin-right: 20px;
+    font-size: 45px;
+}
+.main-container-content h3 {
+    margin-right: 20px;
+    font-size: 20px;
+}

@@ -1,0 +1,14 @@
+.profile-img {
+    height: 168px;
+    width: 168px;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: inline-block;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.avatar {
+    margin: 0;
+    display: inline;
+}

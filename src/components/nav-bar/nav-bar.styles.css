@@ -1,0 +1,14 @@
+.nav-bar {
+    background-color: #002f6c;
+    color: white;
+    height: 100%;
+}
+
+.description-container {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.name-header {
+    font-size: 25px;
+}

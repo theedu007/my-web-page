@@ -1,3 +1,11 @@
+section#nav-bar {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 24rem;
+    order: 0;
+}
+
 .nav-bar {
     background-color: #002f6c;
     color: white;
@@ -10,5 +18,36 @@
 }
 
 .name-header {
-    font-size: 25px;
+    font-size: 1.56rem;
+}
+
+.navigation {
+    text-align: left;
+    margin-top: 2.5rem;
+}
+
+.navigation > .navigation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.navigation-list > .nav-list-element {
+    padding-bottom: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #928f8f;
+}
+
+.nav-link:active {
+    color: #928f8f;
+    border-bottom: 2px solid #928f8f;
 }

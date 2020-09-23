@@ -1,0 +1,50 @@
+.portfolio-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio-line {
+    border-left: 4px solid black;
+    height: 100%;
+    width: 100%;
+    margin-right: 40px;
+    position: relative;
+}
+
+.portfolio-line > .timeline-dot {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    position: absolute;
+    left: -7px;
+    top: 6px;
+}
+
+.portfolio-time {
+    height: 100%;
+    width: 125px;
+    padding-right: 0.50%;
+}
+
+.portfolio-time > span {
+    top: 0;
+    left: 0;
+}
+
+.portfolio-content {
+    padding-left: 20px;
+    height: 100%;
+}
+
+.portfolio-tile {
+    
+}
+
+.portfolio-link {
+    margin-bottom: 0.8rem;
+}
+
+.porfolio-info * {
+    text-align: justify;
+}

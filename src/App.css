@@ -17,3 +17,22 @@
      order: 1;
      margin: 0px;
  }
+
+ .btn {
+     color: white;
+     margin-left: 0;
+     margin-right: 30px;
+     padding: 0.5rem;
+     border-radius: 8%;
+     background-color: #002f6c;
+     font-weight: bold  ;
+     width: 6rem;
+ }
+
+ .btn:hover {
+     background-color: #0350b4;
+ }
+
+ a.btn {
+     text-decoration: none;
+ }

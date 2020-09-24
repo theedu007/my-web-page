@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/my-web-page/static/css/main.57d966e4.chunk.css",
-    "main.js": "/my-web-page/static/js/main.47fd7920.chunk.js",
-    "main.js.map": "/my-web-page/static/js/main.47fd7920.chunk.js.map",
+    "main.css": "/my-web-page/static/css/main.3aa1f4d5.chunk.css",
+    "main.js": "/my-web-page/static/js/main.59f48f55.chunk.js",
+    "main.js.map": "/my-web-page/static/js/main.59f48f55.chunk.js.map",
     "runtime-main.js": "/my-web-page/static/js/runtime-main.877189ff.js",
     "runtime-main.js.map": "/my-web-page/static/js/runtime-main.877189ff.js.map",
-    "static/js/2.90fdd2ca.chunk.js": "/my-web-page/static/js/2.90fdd2ca.chunk.js",
-    "static/js/2.90fdd2ca.chunk.js.map": "/my-web-page/static/js/2.90fdd2ca.chunk.js.map",
+    "static/js/2.c195bb0a.chunk.js": "/my-web-page/static/js/2.c195bb0a.chunk.js",
+    "static/js/2.c195bb0a.chunk.js.map": "/my-web-page/static/js/2.c195bb0a.chunk.js.map",
     "index.html": "/my-web-page/index.html",
-    "precache-manifest.c8fe6ae33a64fd14554db22f883bdaa4.js": "/my-web-page/precache-manifest.c8fe6ae33a64fd14554db22f883bdaa4.js",
+    "precache-manifest.e42016da0bbde813c0d5ead94cf526d7.js": "/my-web-page/precache-manifest.e42016da0bbde813c0d5ead94cf526d7.js",
     "service-worker.js": "/my-web-page/service-worker.js",
-    "static/css/main.57d966e4.chunk.css.map": "/my-web-page/static/css/main.57d966e4.chunk.css.map",
-    "static/js/2.90fdd2ca.chunk.js.LICENSE.txt": "/my-web-page/static/js/2.90fdd2ca.chunk.js.LICENSE.txt",
+    "static/css/main.3aa1f4d5.chunk.css.map": "/my-web-page/static/css/main.3aa1f4d5.chunk.css.map",
+    "static/js/2.c195bb0a.chunk.js.LICENSE.txt": "/my-web-page/static/js/2.c195bb0a.chunk.js.LICENSE.txt",
     "static/media/avatar.png": "/my-web-page/static/media/avatar.0bfd08a4.png",
-    "static/media/main.css": "/my-web-page/static/media/mainPageBackground.48f577f1.jpg"
+    "static/media/home.css": "/my-web-page/static/media/mainPageBackground.48f577f1.jpg",
+    "static/media/tecle.png": "/my-web-page/static/media/tecle.e6cb4885.png"
   },
   "entrypoints": [
     "static/js/runtime-main.877189ff.js",
-    "static/js/2.90fdd2ca.chunk.js",
-    "static/css/main.57d966e4.chunk.css",
-    "static/js/main.47fd7920.chunk.js"
+    "static/js/2.c195bb0a.chunk.js",
+    "static/css/main.3aa1f4d5.chunk.css",
+    "static/js/main.59f48f55.chunk.js"
   ]
 }

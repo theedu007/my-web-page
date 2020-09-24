@@ -45,6 +45,30 @@
     margin-bottom: 0.8rem;
 }
 
-.porfolio-info * {
+.portfolio-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio-info > .porfolio-info-text {
+    width: 60%;
+    margin-right: 16px;
     text-align: justify;
+}
+
+.porfolio-info-text ul {
+    margin-bottom: 16px;
+}
+
+.porfolio-info-text .text{
+    margin-bottom: 16px;
+}
+
+.portfolio-info > .porfolio-info-image {
+    width: auto;
+    max-width: 40%;
+}
+
+img {
+    width: 100%;
 }

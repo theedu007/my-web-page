@@ -1,0 +1,11 @@
+.tech-tag {
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    width: 90px;
+    text-align: center;
+    margin: 5px !important;
+    background-color: #0350b4;
+    font-size: 0.8rem;
+}

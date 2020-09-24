@@ -1,6 +1,8 @@
 import React from 'react';
 import './portfolio-item.styles.css'
 
+import TechTag from '../tecnologies-tags/tecnologies-tags'
+
 const PortfolioItem = props => (
     <div className="portfolio-item">
         <div className="portfolio-time">
@@ -15,8 +17,17 @@ const PortfolioItem = props => (
                 <div className="portfolio-link">
                     <a href={props.websiteLink}>{props.websiteLabel}</a>
                 </div>
-                <div className="porfolio-info">
-                    {props.children}
+                <div className="portfolio-info">
+                    <div className="porfolio-info-text">
+                        {props.children}
+                        <div className="porfolio-tech-tags">
+                            <p>Las tecnologias usadas fueron:</p>
+                            {props.tags.map((tag, index) => <TechTag key={index} tagContent={tag} />)}
+                        </div>
+                    </div>
+                    <div className="porfolio-info-image">
+                        <img src={ props.pageImg } alt="screencapture-mudanzasteclenas" />
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import React  from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import './home.css';
 
 const Home = () => (
@@ -18,7 +18,7 @@ const Home = () => (
                 </h3>
                 <div>
                     <Link to="/portfolio" className="btn">Portafolio</Link>
-                    <a href="" className="btn">Sobre Mi</a>
+                    <Link to="/about-me" className="btn">Sobre mi</Link>
                 </div>
             </div>
         </div>

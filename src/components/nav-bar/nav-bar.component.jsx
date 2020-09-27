@@ -2,10 +2,9 @@ import React from 'react';
 import './nav-bar.styles.css'
 
 import ProfileImg from '../profile-img/profile-img.component';
-import { Link } from 'react-router-dom';
+import NavBarLink from '../nav-bar-link/nav-bar-link.component'
 
-
-const NavBar = () => (
+const NavBar = ({ children }) => (
     <section id="nav-bar">
         <nav className="nav-bar">
             <div className='description-container'>
@@ -15,12 +14,7 @@ const NavBar = () => (
             </div>
             <div className='navigation'>
                 <ul className="navigation-list">
-                    <li className="nav-list-element">
-                        <Link className="nav-link" to="/">Inicio</Link>
-                    </li>
-                    <li className="nav-list-element">
-                        <Link className="nav-link" to="/portfolio">Portafolio</Link>
-                    </li>
+                    { children.map(child => <NavBarLink routerLink={ child }/>) }
                 </ul>
             </div>
         </nav>

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import ContenContainer from '../../components/content-container/content-container.component';
-import PortfolioItem from '../../components/portfolio-item/portfolio-item.component';
+import ContenContainer from '../../../components/content-container/content-container.component';
+import PortfolioItem from '../../../components/portfolio-item/portfolio-item.component';
 
-import imgPage from '../../components/img/tecle.png'
+import imgPage from '../../../components/img/tecle.png'
 
 const Portfolio = () => (
     <ContenContainer>

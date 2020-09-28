@@ -1,0 +1,43 @@
+.blog-header {
+    background-color: #002f6c;
+    height: 65px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.blog-header > div {
+    display: inline-block;
+    margin-left: 16px;
+    padding-top: 16px;
+    font-size: 1.5rem;
+    height: 3rem;
+}
+
+.blog-nav-link {
+    margin: auto;
+    text-align: center;
+}
+
+.nav-link > h1 {
+    border-bottom: inherit;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 0;
+}
+
+.blog-nav {
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    width: calc(100% - 130px);
+}
+
+.blog-nav-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 2rem;
+}

@@ -14,7 +14,7 @@ const NavBar = ({ children }) => (
             </div>
             <div className='navigation'>
                 <ul className="navigation-list">
-                    { children.map(child => <NavBarLink routerLink={ child }/>) }
+                    { children.map((child, index) => <NavBarLink key={ index } routerLink={ child }/>) }
                 </ul>
             </div>
         </nav>

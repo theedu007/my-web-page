@@ -1,0 +1,41 @@
+.post-miniature {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.post-miniature-title {
+    display: inline-block;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.post-miniature-title > a {
+    text-decoration: none;
+    color: black;
+}
+
+.post-miniature-title > a > div {
+    height: 2rem;
+}
+
+.post-miniature-title > a > div > h2:hover {
+    border-bottom: 2px solid black;
+}
+
+.post-miniature-description {
+    margin-top: 2px;
+}
+
+.post-miniature-description {
+    color: grey;
+    font-style: italic;
+}
+
+.post-data > p {
+    margin: 0;
+    margin-top: 5px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.4);
+}

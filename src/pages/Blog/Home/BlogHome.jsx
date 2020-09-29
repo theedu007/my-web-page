@@ -1,7 +1,8 @@
 import React from 'react';
 import { Component } from 'react';
-import { blogEndopoint } from '../../../../package.json';
+import BlogContainer from '../../../components/blog-container/blog-container.component';
 import PostMiniature from '../../../components/blog-miniature/blog-miniature.component';
+import { fetchAllPosts } from '../../../utils/postRequests';
 
 class BlogHome extends Component {
     constructor(){
@@ -9,18 +10,13 @@ class BlogHome extends Component {
         this.state = {
             posts: {}
         }
-        this.fetchPosts.bind(this);
     }
 
     fetchPosts() {
-        fetch(blogEndopoint + 'post', {
-            method: 'GET',
-            mode: 'cors'
+        fetchAllPosts()
+        .then(json => { 
+            this.setState({ posts: json })
         })
-        .then(data => {
-            return data.json()
-        })
-        .then(json => this.setState({ posts: json }))
     }
 
     componentDidMount() {
@@ -30,16 +26,22 @@ class BlogHome extends Component {
     render() {
         const { posts } = this.state;
         return (
-            <div>
-                {posts.data && posts.data.length > 0 ? posts.data.map((post, index) => 
-                <PostMiniature 
-                    key={index} 
-                    title={ post.title }
-                    shortDescription={ post.shortDescription }
-                    postedOn={ post.postedOn }
-                    urlSlug={ post.urlSlug } />
-                ) : null}
-            </div>
+            <BlogContainer>
+                { posts.data && posts.data.length > 0 ? posts.data.map((post, index) => {
+                    return (
+                        <React.Fragment key={Math.random()}>
+                            <PostMiniature 
+                                key={index} 
+                                title={ post.title }
+                                shortDescription={ post.shortDescription }
+                                postedOn={ post.postedOn }
+                                urlSlug={ post.urlSlug } >
+                            </PostMiniature>
+                            {index !== (posts.data.length - 1) && <hr style={{width: '99%'}} key={Math.random()}></hr>}
+                        </React.Fragment>
+                    );
+                }) : null }
+            </BlogContainer>
         )
     }
 }

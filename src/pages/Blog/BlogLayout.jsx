@@ -6,17 +6,18 @@ import './bloglayout.styles.css'
 
 const BlogLayout = (props) => (
     <div id="blog">
-        <header>
-            <BlogNavBar>
-                <Link className="nav-link" to="/">Home</Link>
-                <div>aqui va a ir algo</div>
-            </BlogNavBar>
-        </header>
+        <BlogNavBar>
+            <Link className="nav-link" to="/">Home</Link>
+            <div>aqui va a ir algo</div>
+        </BlogNavBar>
         <main>
             <Switch>
                 {props.children}
             </Switch>
         </main>
+        <footer>
+            <p>Aqui va el footer</p>
+        </footer>
     </div>
 );
 

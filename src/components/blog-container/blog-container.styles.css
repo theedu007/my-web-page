@@ -4,4 +4,5 @@
     background-color: #f1f1f1;
     border: rgba(83, 83, 83, 0.1) solid 2px;
     padding-top: 20px;
+    word-wrap: break-word;
 }

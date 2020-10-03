@@ -13,7 +13,7 @@ const BlogNavBar = ({ children }) => (
         </div>
         <nav className="blog-nav">
             <ul className="blog-nav-items">
-            { children.map((item, index) => <BlogNavBarLink key={index} routerLink={item} />) }
+            { React.Children.map(children, (item, index) => <BlogNavBarLink key={index} routerLink={item} />) }
             </ul>
         </nav>
     </header>

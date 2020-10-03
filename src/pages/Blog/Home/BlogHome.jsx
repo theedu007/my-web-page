@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import BlogContainer from '../../../components/blog-container/blog-container.component';
 import PostMiniature from '../../../components/blog-miniature/blog-miniature.component';
-import { fetchAllPosts } from '../../../utils/postRequests';
+import { fetchAllPosts } from '../../../services/postService';
 
 class BlogHome extends Component {
     constructor(){

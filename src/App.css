@@ -3,8 +3,9 @@
      margin-left: 0;
      margin-right: 30px;
      padding: 0.5rem;
-     border-radius: 8%;
+     border-radius: 10px;
      background-color: #002f6c;
+     border: none;
      font-weight: bold  ;
      width: 6rem;
  }
@@ -19,4 +20,13 @@
 
  .text-center {
      text-align: center;
+ }
+
+ label {
+     display: block;
+ }
+
+ input {
+     display: block;
+     width: 100%;
  }

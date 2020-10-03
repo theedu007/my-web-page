@@ -8,7 +8,6 @@ const BlogLayout = (props) => (
     <div id="blog">
         <BlogNavBar>
             <Link className="nav-link" to="/">Home</Link>
-            <div>aqui va a ir algo</div>
         </BlogNavBar>
         <main>
             <Switch>

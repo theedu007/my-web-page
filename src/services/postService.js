@@ -19,6 +19,20 @@ export const fetchPost = (urlSlug) => (
     .then(response => response.json())
 )
 
+export const findPost = (id) => (
+    fetch(endpoint + `/id/${id}`, {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+            ...getAuthHeaders(),
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        return response.json();
+    })
+)
+
 export const createPost = (jsonPost) => (
     fetch(endpoint + '/create', {
         method: 'POST',
@@ -36,3 +50,29 @@ export const createPost = (jsonPost) => (
         return Promise.reject(respose);
     })
 );
+
+export const updatePost = (jsonPost) => (
+    fetch(endpoint + '/update', {
+        method: 'PUT',
+        mode: 'cors',
+        body: JSON.stringify(jsonPost),
+        headers: {
+            ...getAuthHeaders(),
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(respose => respose.json())
+)
+
+export const deletePost = (jsonPost) => (
+    fetch(endpoint + '/delete', {
+        method: 'DELETE',
+        mode: 'cors',
+        body: JSON.stringify(jsonPost),
+        headers: {
+            ...getAuthHeaders(),
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+)

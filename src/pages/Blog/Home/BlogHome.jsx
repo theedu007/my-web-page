@@ -1,21 +1,26 @@
 import React from 'react';
 import { Component } from 'react';
+
 import BlogContainer from '../../../components/blog-container/blog-container.component';
 import PostMiniature from '../../../components/blog-miniature/blog-miniature.component';
+
+import Spinner from '../../../components/spinner/spiner.component';
+
 import { fetchAllPosts } from '../../../services/postService';
 
 class BlogHome extends Component {
     constructor(){
         super();
         this.state = {
-            posts: {}
+            posts: {},
+            loading: true
         }
     }
 
-    fetchPosts() {
+    fetchPosts() {  
         fetchAllPosts()
         .then(json => { 
-            this.setState({ posts: json })
+            this.setState({ posts: json, loading: false })
         })
     }
 
@@ -24,9 +29,10 @@ class BlogHome extends Component {
     }
 
     render() {
-        const { posts } = this.state;
+        const { posts, loading } = this.state;
         return (
             <BlogContainer>
+                <Spinner isLoading={loading} />
                 { posts.data && posts.data.length > 0 ? posts.data.map((post, index) => {
                     return (
                         <React.Fragment key={Math.random()}>

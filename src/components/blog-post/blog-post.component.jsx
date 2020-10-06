@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import { fetchPost } from '../../services/postService';
+import { toLocalDate } from '../../utils/dateParser';
 import MarkDownWrapper from '../../utils/MakdownWrapper';
 import BlogContainer from '../blog-container/blog-container.component';
 import './post-blog.styles.css';
@@ -33,7 +34,7 @@ class Post extends Component {
                         <MarkDownWrapper markdown={ shortDescription } />
                     </div>
                     <div className="post-info">
-                        <MarkDownWrapper markdown={ 'Publicado el: ' + postedOn } />
+                        <MarkDownWrapper markdown={ 'Publicado el: ' + toLocalDate(postedOn) } />
                     </div>
                     <div className="post-content">
                         <MarkDownWrapper markdown={ postContent } />

@@ -13,14 +13,16 @@ import AdminLayout from './pages/Admin/AdminLayout';
 import CreatePostForm from './pages/Admin/create-post/CreatePost';
 import Login from './pages/Admin/login/Login';
 import Index from './pages/Admin/index/Index';
+import UpdatePost from './pages/Admin/update-post/UpdatePost';
 
 function App() {
   return (
     <Switch>
-      <Route path="/admin/:path?" exact>
+      <Route path="/admin/:path?/:id?" exact>
         <AdminLayout>
           <Route path="/admin/create-post" exact component={ CreatePostForm } />
           <Route path="/admin/login" exact component={ Login } />
+          <Route path="/admin/update/:id" component={ UpdatePost } />
           <Route path="/admin" exact component={ Index } />
         </AdminLayout>
       </Route>

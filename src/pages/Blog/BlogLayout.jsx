@@ -15,7 +15,6 @@ const BlogLayout = (props) => (
             </Switch>
         </main>
         <footer>
-            <p>Aqui va el footer</p>
         </footer>
     </div>
 );

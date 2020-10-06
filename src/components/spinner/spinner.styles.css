@@ -1,0 +1,39 @@
+.spinner-parent {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.spinner {
+    margin: 0 auto;
+    top: calc(50% - 64px);
+    left: calc(50% - 64px);
+    position: fixed;
+    z-index: 2;
+}
+
+.spinner:after{
+    content: " ";
+    margin: 0;
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 6px solid #002f6c;
+    border-color: #002f6c transparent #002f6c transparent;
+    animation: spinner 1.2s linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

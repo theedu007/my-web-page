@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import BlogContainer from '../../../components/blog-container/blog-container.component';
-import { isUserLogged, login } from '../../../services/authService';
+import { login } from '../../../services/authService';
 
 class Login extends Component {
     constructor(props) {
@@ -45,7 +44,7 @@ class Login extends Component {
                         <label htmlFor="password">Contraseña:</label>
                         <input type="password" id="password" value={ this.state.password } onChange={ this.handlePassword }/>
                     </div>
-                    <input type="submit" value="Entrar"/>
+                    <input type="submit" class="btn" value="Entrar"/>
                 </form>
             </BlogContainer>
         )

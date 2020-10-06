@@ -1,4 +1,5 @@
 import React from 'react';
+import TechTag from '../tecnologies-tags/tecnologies-tags';
 
 const PostEditor = (props) => {
     const { post } = props.state;
@@ -11,6 +12,7 @@ const PostEditor = (props) => {
         handleCategories,
         handleTags,
         handleCheckbox,
+        handleSpanClick,
         savePost
     } = props;
 
@@ -34,7 +36,7 @@ const PostEditor = (props) => {
             </div>
             <div className="form-group mb">
                 <label htmlFor="category">Categorias:</label>
-                <select id="category" onChange={ event => { handleCategories(event) }}>
+                <select id="category" value={ post.category.id } onChange={ event => { handleCategories(event) }}>
                     <option>Seleccione una opcion</option>
                     { categories ? categories.map((item, index) => <option value={item.id} key={index} >{item.name}</option> ) : null}
                 </select>
@@ -48,7 +50,13 @@ const PostEditor = (props) => {
             </div>
             <div className="checkbox-group mb">
                 <label htmlFor="posted">Publicado:</label>
-                <input type="checkbox" id="posted" value={post.published} onChange={ event => { handleCheckbox(event) }}/>
+                <input type="checkbox" id="posted" checked={post.published} onChange={ event => { handleCheckbox(event) }}/>
+            </div>
+            <div className="form-group mb">
+                <label>Tags: </label>
+                <div>
+                    {post.tags ? post.tags.map((item, index) => <TechTag key={index} tagId={item.id} tagContent={item.name} clickHandle={handleSpanClick}/>) : null }
+                </div>
             </div>
             <div className="form-group mb">
                 <input type="submit" className="btn" value="Guardar"/>

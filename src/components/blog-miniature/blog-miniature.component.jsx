@@ -3,6 +3,7 @@ import MarkdownView from 'react-showdown';
 import { Link } from 'react-router-dom';
 
 import './blog-miniature.styles.css';
+import { toLocalDate } from '../../utils/dateParser';
 
 const PostMiniature = (props) => {
 
@@ -20,7 +21,7 @@ const PostMiniature = (props) => {
                 { <MarkdownView markdown={shortDescription} />}
             </div>
             <div className="post-data">
-                <p>Publicado: {postedOn}</p>
+                <p>Publicado: { toLocalDate(postedOn) }</p>
             </div>
         </div>
     );

@@ -7,10 +7,12 @@
      background-color: #002f6c;
      border: none;
      font-weight: bold;
-     width: 6rem;
+     min-width: 6rem;
+     width: auto;
      font-size: 1rem;
      height: 38px;
      font-family: inherit;
+     display: inline-block;
  }
 
  .btn:hover {
@@ -19,6 +21,7 @@
 
  a.btn {
      text-decoration: none;
+     text-align: center;
  }
 
  .text-center {

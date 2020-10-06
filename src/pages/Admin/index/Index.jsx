@@ -60,7 +60,7 @@ class Index extends Component{
                                     <td>{title.replace(/##/g,"").trim()}</td>
                                     <td>{toLocalDate(postedOn)}</td>
                                     <td>
-                                        <Link to={`admin/update/${id}`} className="btn">Editar</Link>
+                                        <Link to={`admin/post/update/${id}`} className="btn">Editar</Link>
                                         <button className="btn" onClick={(event) => this.handleDelete(event, id)}>Eliminar</button>
                                     </td>
                                 </tr>

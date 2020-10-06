@@ -9,9 +9,10 @@ import './post-blog.styles.css';
 class Post extends Component {
     constructor(props) {
         super();
+        debugger;
         this.state = {
             post: {},
-            urlSlug: ''
+            urlSlug: '',
         } 
     }
 

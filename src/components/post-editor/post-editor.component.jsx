@@ -1,6 +1,8 @@
 import React from 'react';
 import TechTag from '../tecnologies-tags/tecnologies-tags';
 
+import { Link } from 'react-router-dom';
+
 const PostEditor = (props) => {
     const { post } = props.state;
     const { categories, tags} = props.state;
@@ -58,8 +60,13 @@ const PostEditor = (props) => {
                     {post.tags ? post.tags.map((item, index) => <TechTag key={index} tagId={item.id} tagContent={item.name} clickHandle={handleSpanClick}/>) : null }
                 </div>
             </div>
-            <div className="form-group mb">
+            <div className="mb ml">
                 <input type="submit" className="btn" value="Guardar"/>
+                <Link to={{
+                    pathname: "/admin/post/preview",
+                    state: {...post}
+                }}
+                className="btn">Preview</Link>
             </div>
         </form>
     );

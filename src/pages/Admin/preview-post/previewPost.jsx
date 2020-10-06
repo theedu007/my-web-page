@@ -8,7 +8,6 @@ const PreviewPost = (props) => {
     
     const { post } = props;
     const { title, shortDescription, postedOn, postContent } = post;
-    debugger;
 
     return (
         <BlogContainer>

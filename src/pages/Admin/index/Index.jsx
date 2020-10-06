@@ -5,7 +5,6 @@ import BlogContainer from '../../../components/blog-container/blog-container.com
 import Spinner from '../../../components/spinner/spiner.component';
 import Table from '../../../components/table/table.component.';
 
-import { isUserLogged } from '../../../services/authService';
 import { deletePost, fetchAllPosts } from '../../../services/postService';
 import { toLocalDate } from '../../../utils/dateParser';
 
@@ -44,9 +43,10 @@ class Index extends Component{
 
     render() {
         const {posts, loading} = this.state;
+        const { isUserLogged } = this.props;
 
         return(
-            !isUserLogged() ? <Redirect to="/admin/login" /> :
+            !isUserLogged ? <Redirect to="/admin/login" /> :
             <BlogContainer>
                 <Spinner isLoading={loading}/>
                 { posts.data && posts.data.length > 0 ? 

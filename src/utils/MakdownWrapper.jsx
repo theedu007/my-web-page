@@ -7,7 +7,8 @@ const MarkDownWrapper = ({ markdown }) => (
     <MarkdownView
         markdown={markdown}
         options={{
-            extensions:[showdownHighlight]
+            extensions:[showdownHighlight],
+            parseImgDimensions: true
         }}
     />
 );

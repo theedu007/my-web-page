@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const PostEditor = (props) => {
     const { post } = props.state;
-    const { categories, tags} = props.state;
+    const { categories, tags} = post;
     const { 
         handleTitle, 
         handleShortDescription, 

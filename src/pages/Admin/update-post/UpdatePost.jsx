@@ -134,9 +134,10 @@ class UpdatePost extends Component {
 
     render() {
         const { loading } = this.state;
+        const { isUserLogged } = this.props;
 
         return(
-            !isUserLogged() ? <Redirect to="/admin/login" /> :
+            !isUserLogged ? <Redirect to="/admin/login" /> :
             <BlogContainer className="container-medium">
                 <Spinner isLoading={loading} />
                 <PostEditor

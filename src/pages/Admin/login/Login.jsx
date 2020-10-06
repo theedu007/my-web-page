@@ -22,6 +22,7 @@ class Login extends Component {
         this.setState({ password: event.target.value })
     }
 
+
     handleLogin(event) {
         event.preventDefault();
         const { username, password } = this.state;
@@ -44,7 +45,7 @@ class Login extends Component {
                         <label htmlFor="password">Contraseña:</label>
                         <input type="password" id="password" value={ this.state.password } onChange={ this.handlePassword }/>
                     </div>
-                    <input type="submit" class="btn" value="Entrar"/>
+                    <input type="submit" className="btn" value="Entrar"/>
                 </form>
             </BlogContainer>
         )

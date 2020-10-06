@@ -15,18 +15,18 @@ import Login from './pages/Admin/login/Login';
 import Index from './pages/Admin/index/Index';
 import UpdatePost from './pages/Admin/update-post/UpdatePost';
 import PreviewPost from './pages/Admin/preview-post/previewPost';
+import RouteWrapper from './utils/RouteWrapper';
 
 function App() {
   return (
     <Switch>
       <Route path="/admin/:entity?/:action?/:id?" exact>
-        <AdminLayout>
-          <Route path="/admin/create-post" exact component={ CreatePostForm } />
-          <Route path="/admin/login" exact component={ Login } />
-          <Route path="/admin/post/update/:id" component={ UpdatePost } />
-          <Route path="/admin/post/preview" render={ props => <PreviewPost post={props.location.state} />} />
-          <Route path="/admin" exact component={ Index } />
-        </AdminLayout>
+        <RouteWrapper path="/admin/create-post" exact Layout={ AdminLayout } Component={ CreatePostForm } />
+        <RouteWrapper path="/admin/login" exact Layout={ AdminLayout } Component={ Login } />
+        <RouteWrapper path="/admin/post/update/:id" exact Layout={ AdminLayout } Component={ UpdatePost } />
+        <RouteWrapper path="/admin/post/preview" exact Layout={ AdminLayout } Component={ props => <PreviewPost post={props.location.state} /> } />
+        <RouteWrapper path="/admin/create-post" exact Layout={ AdminLayout } Component={ CreatePostForm }/>
+        <RouteWrapper path="/admin" exact Layout={ AdminLayout } Component={ Index} />
       </Route>
       <Route path="/blog/:path?" exact>
         <BlogLayout>

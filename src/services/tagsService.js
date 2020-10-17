@@ -11,3 +11,41 @@ export const fetchAllTags = () => (
     })
     .then(response => response.json())
 )
+
+export const findTag = (id) => (
+    fetch(endpoint + `/id/${id}`,{
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+            ...getAuthHeaders(),
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+)
+
+export const createTag = tagJson => (
+    fetch(endpoint + '/create', {
+        method: 'POST',
+        mode: 'cors',
+        body: JSON.stringify(tagJson),
+        headers: {
+            ...getAuthHeaders(),
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+);
+
+export const updateTag = tagJson => (
+    fetch(endpoint + '/update', {
+        method: 'PUT',
+        mode: 'cors',
+        body: JSON.stringify(tagJson),
+        headers: {
+            ...getAuthHeaders(),
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+);

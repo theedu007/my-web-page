@@ -11,3 +11,16 @@ export const fetchAllCategories = () => (
     })
     .then(response => response.json())
 )
+
+export const createCategory = (jsonCategory) => (
+    fetch(endpoint + '/create', {
+        method: 'POST',
+        mode: 'cors',
+        body: JSON.stringify(jsonCategory),
+        headers: {
+            ...getAuthHeaders(),
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+)

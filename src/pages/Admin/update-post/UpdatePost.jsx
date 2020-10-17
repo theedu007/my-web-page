@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import BlogContainer from '../../../components/blog-container/blog-container.component';
-import { isUserLogged } from '../../../services/authService';
-import PostEditor from '../../../components/post-editor/post-editor.component';
 import { Redirect } from 'react-router-dom';
-import { findPost, updatePost  } from '../../../services/postService';
+
+import BlogContainer from '../../../components/blog-container/blog-container.component';
+import PostEditor from '../../../components/post-editor/post-editor.component';
+import Spinner from '../../../components/spinner/spiner.component';
+
+import { findPost, updatePost } from '../../../services/postService';
 import { fetchAllCategories } from '../../../services/categoryService';
 import { fetchAllTags } from '../../../services/tagsService';
-import Spinner from '../../../components/spinner/spiner.component';
 
 class UpdatePost extends Component {
     constructor(props){

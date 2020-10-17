@@ -8,7 +8,8 @@ import Table from '../../../components/table/table.component.';
 import { deletePost, fetchAllPosts } from '../../../services/postService';
 import { toLocalDate } from '../../../utils/dateParser';
 
-class Index extends Component{
+class Index extends Component {
+    _isMounted = false;
     constructor(props) {
         super();
         this.state = {
@@ -18,16 +19,19 @@ class Index extends Component{
         this.handleDelete = this.handleDelete.bind(this);
     }
 
-    fetchPosts() {  
+    componentDidMount() {
+        this._isMounted = true;
         fetchAllPosts()
         .then(json => { 
-            this.setState({ posts: json, loading: false })
-        })
+            if(this._isMounted) {
+                this.setState({ posts: json, loading: false })
+            }
+        });
     }
 
-    componentDidMount() {
-        this.fetchPosts();
-    }
+    componentWillUnmount() {
+        this._isMounted = false;
+      }
 
     handleDelete(event, postId) {
         event.preventDefault();
@@ -42,9 +46,8 @@ class Index extends Component{
     }
 
     render() {
-        const {posts, loading} = this.state;
+        const { posts, loading } = this.state;
         const { isUserLogged } = this.props;
-
         return(
             !isUserLogged ? <Redirect to="/admin/login" /> :
             <BlogContainer>

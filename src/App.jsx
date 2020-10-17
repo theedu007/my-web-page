@@ -16,17 +16,24 @@ import Index from './pages/Admin/index/Index';
 import UpdatePost from './pages/Admin/update-post/UpdatePost';
 import PreviewPost from './pages/Admin/preview-post/previewPost';
 import RouteWrapper from './utils/RouteWrapper';
+import CreateTag from './pages/Admin/create-tag/CreateTag';
+import UpdateTag from './pages/Admin/update-tag/update-tag';
+import Tags from './pages/Admin/tags/Tags';
+import CreateCategory from './pages/Admin/create-category/CreateCategory'
 
 function App() {
   return (
     <Switch>
       <Route path="/admin/:entity?/:action?/:id?" exact>
-        <RouteWrapper path="/admin/create-post" exact Layout={ AdminLayout } Component={ CreatePostForm } />
-        <RouteWrapper path="/admin/login" exact Layout={ AdminLayout } Component={ Login } />
+        <RouteWrapper path="/admin/post/create-post" exact Layout={ AdminLayout } Component={ CreatePostForm } />
         <RouteWrapper path="/admin/post/update/:id" exact Layout={ AdminLayout } Component={ UpdatePost } />
         <RouteWrapper path="/admin/post/preview" exact Layout={ AdminLayout } Component={ props => <PreviewPost post={props.location.state} /> } />
-        <RouteWrapper path="/admin/create-post" exact Layout={ AdminLayout } Component={ CreatePostForm }/>
-        <RouteWrapper path="/admin" exact Layout={ AdminLayout } Component={ Index} />
+        <RouteWrapper path="/admin/tag/create-tag" exact Layout={ AdminLayout } Component={ CreateTag }/>
+        <RouteWrapper path="/admin/tag/update/:id" exact Layout={ AdminLayout } Component={ UpdateTag } />
+        <RouteWrapper path="/admin/tags" exact Layout={ AdminLayout } Component={ Tags } />
+        <RouteWrapper path="/admin/categories/create-category" exact Layout={ AdminLayout } Component={ CreateCategory } />
+        <RouteWrapper path="/admin/login" exact Layout={ AdminLayout } Component={ Login } />
+        <RouteWrapper path="/admin" exact Layout={ AdminLayout } Component={ Index } />
       </Route>
       <Route path="/blog/:path?" exact>
         <BlogLayout>

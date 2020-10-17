@@ -114,7 +114,6 @@ class CreatePostForm extends Component {
 
     render() { 
         const { isUserLogged } = this.props;
-        
         return(
             !isUserLogged ? <Redirect to="/admin/login" /> :
             <BlogContainer className="container-medium">

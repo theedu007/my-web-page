@@ -22,7 +22,9 @@ class AdminLayout extends Component {
                     { isUserLogged ?
                         (   
                             <React.Fragment>
-                                <Link to="/admin/create-post" className="nav-link nav-spacing">Crear Post</Link>
+                                <Link to="/admin/post/create-post" className="nav-link nav-spacing">Crear Post</Link>
+                                <Link to="/admin/tag/create-tag" className="nav-link nav-spacing">Crear Tag</Link>
+                                <Link to="/admin/categories/create-category" className="nav-link nav-spacing">Crear Categoria</Link>
                                 <Link to="/admin" className="nav-link nav-spacing">Home</Link>
                             </React.Fragment>
                         )
